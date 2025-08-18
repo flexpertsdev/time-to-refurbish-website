@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Hide scrollbars */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @apply text-gray-900;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  /* Minimal button styles with red hover */
+  .btn-primary {
+    @apply px-8 py-4 bg-black text-white font-medium tracking-wide transition-all duration-300;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-accent shadow-lg;
+    box-shadow: 0 10px 30px -10px rgba(220, 38, 38, 0.3);
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-black text-black font-medium tracking-wide transition-all duration-300;
+  }
+  
+  .btn-secondary:hover {
+    @apply border-accent bg-accent text-white;
+  }
+  
+  .btn-minimal {
+    @apply text-black font-medium relative transition-all;
+  }
+  
+  .btn-minimal::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+  
+  .btn-minimal:hover::after {
+    @apply w-full;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 lg:px-12;
+  }
+  
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+  
+  /* Red accent decorations */
+  .accent-line {
+    @apply w-12 h-1 bg-accent mx-auto mb-6;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1), 
+                0 10px 20px -10px rgba(220, 38, 38, 0.1);
+  }
+}
+
+/* Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-pulse-red {
+  animation: pulse-red 2s infinite;
+}
