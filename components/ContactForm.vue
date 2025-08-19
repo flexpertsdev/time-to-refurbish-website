@@ -1,5 +1,5 @@
 <template>
-  <section class="section-padding bg-gray-50">
+  <section id="contact" class="section-padding bg-gray-50">
     <div class="container-custom">
       <div class="max-w-2xl mx-auto">
         <!-- Header -->

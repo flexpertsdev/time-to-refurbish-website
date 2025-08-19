@@ -4,6 +4,7 @@
     <ServicesSection />
     <BeforeAfterSlider />
     <TestimonialsSection />
+    <CTASection />
     <ContactForm />
   </div>
 </template>

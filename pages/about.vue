@@ -91,15 +91,15 @@
             <div class="aspect-[3/4] bg-gray-100">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787"
-                alt="Michal - Founder"
+                alt="Mykhaylo - Founder"
                 class="w-full h-full object-cover"
               />
             </div>
             <div>
-              <h3 class="text-3xl font-serif mb-4">Michal Kowalski</h3>
+              <h3 class="text-3xl font-serif mb-4">Mykhaylo Vyshnevskyy</h3>
               <p class="text-accent font-medium mb-4">Founder & Master Craftsman</p>
               <p class="text-gray-600 mb-4">
-                With over 15 years of experience in luxury renovations, Michal founded 
+                With over 15 years of experience in luxury renovations, Mykhaylo founded 
                 Time To Refurbish with a simple vision: to bring exceptional craftsmanship 
                 and personalized service to every project.
               </p>
@@ -109,7 +109,7 @@
                 their lifestyle and aspirations."
               </p>
               <p class="text-gray-600">
-                Michal personally oversees every project, ensuring the highest standards 
+                Mykhaylo personally oversees every project, ensuring the highest standards 
                 of quality and attention to detail that our clients have come to expect.
               </p>
               <div class="mt-6 flex gap-4">

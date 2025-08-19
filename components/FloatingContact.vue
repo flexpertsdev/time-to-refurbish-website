@@ -23,13 +23,14 @@
         </a>
         
         <!-- Form Button -->
-        <NuxtLink 
-          to="/contact"
+        <a 
+          href="#contact"
+          @click="handleContactClick"
           class="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
         >
           <Mail :size="20" />
           <span class="text-sm font-medium">Get Quote</span>
-        </NuxtLink>
+        </a>
       </div>
     </Transition>
     
@@ -43,8 +44,6 @@
         <MessageSquare v-else :size="28" key="chat" />
       </Transition>
       
-      <!-- Pulse animation when closed -->
-      <span v-if="!isOpen" class="absolute inset-0 rounded-full bg-accent animate-ping opacity-30"></span>
       
       <!-- Chat label -->
       <Transition name="fade">
@@ -60,6 +59,15 @@
 import { Phone, MessageCircle, Mail, MessageSquare, X } from 'lucide-vue-next'
 
 const isOpen = ref(false)
+
+const handleContactClick = (e) => {
+  e.preventDefault()
+  isOpen.value = false
+  const contactSection = document.getElementById('contact')
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
 // Close when clicking outside
 onMounted(() => {
