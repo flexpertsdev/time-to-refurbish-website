@@ -44,13 +44,6 @@
         <MessageSquare v-else :size="28" key="chat" />
       </Transition>
       
-      
-      <!-- Chat label -->
-      <Transition name="fade">
-        <span v-if="!isOpen" class="absolute -left-20 bg-black text-white text-xs px-3 py-1 rounded-full whitespace-nowrap">
-          Need help?
-        </span>
-      </Transition>
     </button>
   </div>
 </template>

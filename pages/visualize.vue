@@ -17,6 +17,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'visualize'
+})
+
 useHead({
   title: 'Visualize Your Space | Time To Refurbish',
   meta: [

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen py-20">
+  <div class="min-h-screen py-20 pb-32 md:pb-20">
     <div class="container-custom">
       <!-- Progress Bar -->
       <div class="max-w-3xl mx-auto mb-12">
@@ -77,9 +77,11 @@
             <div class="max-w-md mx-auto">
               <div v-if="!imagePreview" 
                 @click="$refs.fileInput.click()"
-                @dragover.prevent
+                @dragover.prevent="dragOver = true"
+                @dragleave.prevent="dragOver = false"
                 @drop.prevent="handleDrop"
-                class="border-3 border-dashed border-gray-300 rounded-lg p-12 cursor-pointer hover:border-accent transition-colors"
+                class="border-2 border-dashed rounded-lg p-12 cursor-pointer transition-all"
+                :class="dragOver ? 'border-accent bg-accent/5' : 'border-gray-400 hover:border-accent'"
               >
                 <i class="gg-software-upload text-5xl text-gray-400 mb-4 inline-block"></i>
                 <p class="text-gray-600 mb-2">Click to upload or drag & drop</p>
@@ -213,10 +215,10 @@
         </Transition>
 
         <!-- Navigation -->
-        <div v-if="currentStep > 1 && currentStep < 5" class="flex justify-between mt-8">
+        <div v-if="currentStep > 1 && currentStep < 5" class="flex justify-between mt-8 md:mt-8 fixed md:relative bottom-0 left-0 right-0 md:bottom-auto bg-white md:bg-transparent p-4 md:p-0 border-t md:border-0 z-10">
           <button
             @click="previousStep"
-            class="px-6 py-2 text-gray-600 hover:text-accent transition-colors"
+            class="px-6 py-3 md:py-2 text-gray-600 hover:text-accent transition-colors"
           >
             ← Back
           </button>
@@ -241,6 +243,7 @@ const totalSteps = 5
 const isProcessing = ref(false)
 const imagePreview = ref(null)
 const resultImage = ref(null)
+const dragOver = ref(false)
 
 const formData = ref({
   roomType: '',
@@ -318,6 +321,7 @@ const handleFileSelect = (event) => {
 }
 
 const handleDrop = (event) => {
+  dragOver.value = false
   const file = event.dataTransfer.files[0]
   if (file) {
     processFile(file)
