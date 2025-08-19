@@ -39,8 +39,7 @@
                 class="p-6 bg-white border-2 hover:border-accent transition-all group"
                 :class="formData.roomType === room.value ? 'border-accent' : 'border-gray-200'"
               >
-                <i :class="room.icon" class="text-3xl mb-3 block transition-colors"
-                  :class="formData.roomType === room.value ? 'text-accent' : 'text-gray-400 group-hover:text-accent'"></i>
+                <i :class="[room.icon, 'text-3xl mb-3 block transition-colors', formData.roomType === room.value ? 'text-accent' : 'text-gray-400 group-hover:text-accent']"></i>
                 <span class="font-medium">{{ room.label }}</span>
               </button>
             </div>
