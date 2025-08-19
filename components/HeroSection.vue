@@ -19,7 +19,13 @@
       <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 font-light tracking-wide animate-fade-up" style="animation-delay: 0.2s">
         Luxury renovations & bespoke design for discerning homeowners in South East London
       </p>
-      <div class="animate-fade-up" style="animation-delay: 0.4s">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="animation-delay: 0.4s">
+        <NuxtLink 
+          to="/visualize" 
+          class="inline-block bg-accent text-white px-10 py-4 text-sm font-medium tracking-widest hover:bg-accent-dark transition-all uppercase transform hover:scale-105"
+        >
+          Visualize Your Space
+        </NuxtLink>
         <NuxtLink 
           to="/contact" 
           class="inline-block bg-white text-black px-10 py-4 text-sm font-medium tracking-widest hover:bg-gray-100 transition-colors uppercase"
