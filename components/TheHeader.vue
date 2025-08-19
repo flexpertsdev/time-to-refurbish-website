@@ -78,7 +78,7 @@ const mobileMenuOpen = ref(false)
 
 const navigation = [
   { name: 'Services', href: '/services' },
-  { name: 'Visualize', href: '/visualize' },
+  { name: 'Visualise', href: '/visualize' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' }

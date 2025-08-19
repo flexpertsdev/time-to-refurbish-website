@@ -23,7 +23,15 @@
           </div>
 
           <!-- Form Steps -->
-          <form @submit.prevent="handleSubmit" class="space-y-8">
+          <form 
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            @submit.prevent="handleSubmit" 
+            class="space-y-8"
+          >
+            <!-- Hidden field for Netlify Forms -->
+            <input type="hidden" name="form-name" value="contact" />
             <!-- Step 1: Name -->
             <Transition name="fade" mode="out-in">
               <div v-if="currentStep === 1" key="step1">
@@ -262,7 +270,8 @@ const handleSubmit = async () => {
   try {
     await fetch('/', {
       method: 'POST',
-      body: formDataToSubmit
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formDataToSubmit).toString()
     })
     currentStep.value = 6
   } catch (error) {

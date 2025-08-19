@@ -4,7 +4,7 @@
   <title>Form Handler</title>
 </head>
 <body>
-  <!-- Hidden form for Netlify to detect -->
+  <!-- Hidden form for Netlify to detect - Contact Form -->
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
     <input type="text" name="name" />
     <input type="text" name="projectType" />
@@ -13,6 +13,18 @@
     <input type="text" name="budget" />
     <input type="email" name="email" />
     <input type="tel" name="phone" />
+  </form>
+
+  <!-- Hidden form for Netlify to detect - Visualiser Quote Form -->
+  <form name="visualizer-quote" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <textarea name="comments"></textarea>
+    <input type="hidden" name="room_type" />
+    <input type="hidden" name="style" />
+    <input type="hidden" name="custom_prompt" />
+    <input type="hidden" name="transformation_level" />
   </form>
 </body>
 </html>

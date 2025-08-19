@@ -24,7 +24,7 @@
           to="/visualize" 
           class="inline-block bg-accent text-white px-10 py-4 text-sm font-medium tracking-widest hover:bg-accent-dark transition-all uppercase transform hover:scale-105"
         >
-          Visualize Your Space
+          Visualise Your Space
         </NuxtLink>
         <NuxtLink 
           to="/contact" 
