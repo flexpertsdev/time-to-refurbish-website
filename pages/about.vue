@@ -43,8 +43,23 @@
       </div>
     </section>
 
-    <!-- Values -->
+    <!-- Mission Section -->
     <section class="section-padding bg-gray-50">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="accent-line"></div>
+          <h2 class="font-serif text-4xl mb-6">Our Mission</h2>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            To transform houses into dream homes through exceptional craftsmanship, innovative design, 
+            and an unwavering commitment to client satisfaction. We believe every home has the potential 
+            to be extraordinary, and we're here to unlock that potential.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section-padding">
       <div class="container-custom">
         <h2 class="font-serif text-4xl text-center mb-16">Our Values</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -154,6 +169,45 @@
       </div>
     </section>
 
+    <!-- Services Overview -->
+    <section class="section-padding bg-gray-50">
+      <div class="container-custom">
+        <h2 class="font-serif text-4xl text-center mb-16">What We Do</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <Home :size="32" class="text-accent mb-4" />
+            <h3 class="text-xl font-medium mb-3">Complete Renovations</h3>
+            <p class="text-gray-600">Full property transformations from concept to completion</p>
+          </div>
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <ChefHat :size="32" class="text-accent mb-4" />
+            <h3 class="text-xl font-medium mb-3">Luxury Kitchens</h3>
+            <p class="text-gray-600">Bespoke kitchen design with premium materials and appliances</p>
+          </div>
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <Bath :size="32" class="text-accent mb-4" />
+            <h3 class="text-xl font-medium mb-3">Designer Bathrooms</h3>
+            <p class="text-gray-600">Spa-quality bathrooms and wet room installations</p>
+          </div>
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <DoorOpen :size="32" class="text-accent mb-4" />
+            <h3 class="text-xl font-medium mb-3">Fitted Wardrobes</h3>
+            <p class="text-gray-600">Custom storage solutions maximizing every inch of space</p>
+          </div>
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <Sparkles :size="32" class="text-accent mb-4" />
+            <h3 class="text-xl font-medium mb-3">Spa & Wellness</h3>
+            <p class="text-gray-600">Jacuzzi installations and home wellness spaces</p>
+          </div>
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <Wifi :size="32" class="text-accent mb-4" />
+            <h3 class="text-xl font-medium mb-3">Smart Homes</h3>
+            <p class="text-gray-600">Intelligent home automation and integration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Stats -->
     <section class="section-padding bg-black text-white">
       <div class="container-custom">
@@ -192,7 +246,7 @@
 </template>
 
 <script setup>
-import { Award, Users, Clock, Check, Phone, Mail } from 'lucide-vue-next'
+import { Award, Users, Clock, Check, Phone, Mail, Home, ChefHat, Bath, DoorOpen, Sparkles, Wifi } from 'lucide-vue-next'
 
 useHead({
   title: 'About Us | Time To Refurbish',

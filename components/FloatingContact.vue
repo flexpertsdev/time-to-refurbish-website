@@ -1,12 +1,12 @@
 <template>
-  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+  <div class="fixed bottom-6 right-6 z-40">
     <!-- Expanded Options -->
     <Transition name="slide-up">
-      <div v-if="isOpen" class="flex flex-col gap-3">
+      <div v-if="isOpen" class="absolute bottom-20 right-0 flex flex-col gap-3 mb-3">
         <!-- Call Button -->
         <a 
           href="tel:07883300410"
-          class="flex items-center gap-3 bg-white text-black px-4 py-3 shadow-lg hover:shadow-xl transition-all border border-gray-200"
+          class="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all border border-gray-200 whitespace-nowrap"
         >
           <Phone :size="20" />
           <span class="text-sm font-medium">Call Now</span>
@@ -16,7 +16,7 @@
         <a 
           href="https://wa.me/447883300410"
           target="_blank"
-          class="flex items-center gap-3 bg-green-500 text-white px-4 py-3 shadow-lg hover:shadow-xl transition-all"
+          class="flex items-center gap-3 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
         >
           <MessageCircle :size="20" />
           <span class="text-sm font-medium">WhatsApp</span>
@@ -25,7 +25,7 @@
         <!-- Form Button -->
         <NuxtLink 
           to="/contact"
-          class="flex items-center gap-3 bg-black text-white px-4 py-3 shadow-lg hover:shadow-xl transition-all"
+          class="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
         >
           <Mail :size="20" />
           <span class="text-sm font-medium">Get Quote</span>
@@ -33,19 +33,31 @@
       </div>
     </Transition>
     
-    <!-- Main Toggle Button -->
+    <!-- Chat Bubble Button -->
     <button 
       @click="isOpen = !isOpen"
-      class="w-14 h-14 bg-accent text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-105"
-      :class="isOpen ? 'rotate-45' : ''"
+      class="relative w-16 h-16 bg-accent text-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center group"
     >
-      <Plus :size="24" />
+      <Transition name="fade" mode="out-in">
+        <X v-if="isOpen" :size="24" key="close" />
+        <MessageSquare v-else :size="28" key="chat" />
+      </Transition>
+      
+      <!-- Pulse animation when closed -->
+      <span v-if="!isOpen" class="absolute inset-0 rounded-full bg-accent animate-ping opacity-30"></span>
+      
+      <!-- Chat label -->
+      <Transition name="fade">
+        <span v-if="!isOpen" class="absolute -left-20 bg-black text-white text-xs px-3 py-1 rounded-full whitespace-nowrap">
+          Need help?
+        </span>
+      </Transition>
     </button>
   </div>
 </template>
 
 <script setup>
-import { Phone, MessageCircle, Mail, Plus } from 'lucide-vue-next'
+import { Phone, MessageCircle, Mail, MessageSquare, X } from 'lucide-vue-next'
 
 const isOpen = ref(false)
 
@@ -71,7 +83,13 @@ onMounted(() => {
   transform: translateY(20px);
 }
 
-button {
-  transition: transform 0.3s ease;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

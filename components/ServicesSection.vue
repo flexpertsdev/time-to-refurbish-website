@@ -27,12 +27,10 @@
           <p class="text-gray-600 mb-4 leading-relaxed">{{ service.description }}</p>
           <NuxtLink 
             :to="service.link"
-            class="text-sm font-medium tracking-wider relative inline-block group/link"
+            class="inline-flex items-center gap-2 text-sm font-medium tracking-wider hover:text-accent transition-colors group/link"
           >
-            <span class="relative">
-              Learn More
-              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-black transition-all group-hover/link:bg-accent"></span>
-            </span>
+            Learn More 
+            <ArrowRight :size="16" class="transition-transform group-hover/link:translate-x-1" />
           </NuxtLink>
         </div>
       </div>
@@ -41,6 +39,8 @@
 </template>
 
 <script setup>
+import { ArrowRight } from 'lucide-vue-next'
+
 const services = [
   {
     id: 1,

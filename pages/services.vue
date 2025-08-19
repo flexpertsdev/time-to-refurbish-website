@@ -10,9 +10,25 @@
       </div>
     </section>
 
+    <!-- Introduction -->
+    <section class="py-16 bg-gray-50">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="accent-line"></div>
+          <h2 class="font-serif text-3xl md:text-4xl mb-6">Transforming Homes Across South East London</h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            With over 15 years of experience and 200+ successful projects, we specialize in creating 
+            luxury living spaces that combine exceptional craftsmanship with innovative design. 
+            From bespoke kitchens to complete property renovations, we deliver excellence at every step.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Services Grid -->
     <section class="section-padding">
       <div class="container-custom">
+        <h2 class="font-serif text-3xl md:text-4xl text-center mb-12">Our Expertise</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <NuxtLink 
             v-for="service in services" 
@@ -33,6 +49,59 @@
               Learn More <ArrowRight :size="16" />
             </span>
           </NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding bg-gray-50">
+      <div class="container-custom">
+        <h2 class="font-serif text-3xl md:text-4xl text-center mb-12">Our Process</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+            <h3 class="text-xl font-medium mb-2">Consultation</h3>
+            <p class="text-gray-600">Free initial consultation to discuss your vision and requirements</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+            <h3 class="text-xl font-medium mb-2">Design & Quote</h3>
+            <p class="text-gray-600">Detailed design proposals and transparent pricing</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+            <h3 class="text-xl font-medium mb-2">Construction</h3>
+            <p class="text-gray-600">Expert execution with minimal disruption to your daily life</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+            <h3 class="text-xl font-medium mb-2">Completion</h3>
+            <p class="text-gray-600">Final walkthrough and handover with warranty documentation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div class="text-4xl font-serif text-accent mb-2">200+</div>
+            <p class="text-gray-600">Projects Completed</p>
+          </div>
+          <div>
+            <div class="text-4xl font-serif text-accent mb-2">15+</div>
+            <p class="text-gray-600">Years Experience</p>
+          </div>
+          <div>
+            <div class="text-4xl font-serif text-accent mb-2">100%</div>
+            <p class="text-gray-600">Client Satisfaction</p>
+          </div>
+          <div>
+            <div class="text-4xl font-serif text-accent mb-2">10yr</div>
+            <p class="text-gray-600">Warranty</p>
+          </div>
         </div>
       </div>
     </section>

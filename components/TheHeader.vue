@@ -5,9 +5,9 @@
         <!-- Logo -->
         <NuxtLink to="/" class="relative z-10">
           <img 
-            src="/newlogo.png" 
+            src="/logo-optimized.png" 
             alt="Time To Refurbish" 
-            class="h-10 lg:h-12 w-auto"
+            class="h-8 lg:h-10 w-auto object-contain"
           />
         </NuxtLink>
 

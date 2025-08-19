@@ -10,10 +10,46 @@
       </div>
     </section>
 
-    <!-- Contact Form First -->
+    <!-- Quick Contact Info -->
+    <section class="py-16 bg-gray-50">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <Phone :size="32" class="text-accent mx-auto mb-4" />
+            <h3 class="text-xl font-medium mb-2">Call Us</h3>
+            <a href="tel:07883300410" class="text-lg text-gray-600 hover:text-accent transition-colors">
+              07883 300410
+            </a>
+            <p class="text-sm text-gray-500 mt-2">Mon-Fri 8am-6pm, Sat 9am-4pm</p>
+          </div>
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <Mail :size="32" class="text-accent mx-auto mb-4" />
+            <h3 class="text-xl font-medium mb-2">Email Us</h3>
+            <a href="mailto:timetorefurbish@gmail.com" class="text-lg text-gray-600 hover:text-accent transition-colors">
+              timetorefurbish@gmail.com
+            </a>
+            <p class="text-sm text-gray-500 mt-2">We reply within 24 hours</p>
+          </div>
+          <div class="bg-white p-8 hover:shadow-lg transition-shadow">
+            <MessageCircle :size="32" class="text-accent mx-auto mb-4" />
+            <h3 class="text-xl font-medium mb-2">WhatsApp</h3>
+            <a href="https://wa.me/447883300410" target="_blank" class="text-lg text-gray-600 hover:text-accent transition-colors">
+              Chat with us
+            </a>
+            <p class="text-sm text-gray-500 mt-2">Quick responses during work hours</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
     <section class="section-padding">
       <div class="container-custom">
         <div class="max-w-2xl mx-auto mb-20">
+          <div class="text-center mb-12">
+            <h2 class="font-serif text-4xl mb-4">Get Your Free Quote</h2>
+            <p class="text-gray-600">Tell us about your project and we'll provide a detailed estimate</p>
+          </div>
           <ContactForm />
         </div>
 
@@ -111,7 +147,7 @@
 </template>
 
 <script setup>
-import { Phone, Mail, MapPin, Facebook, Star } from 'lucide-vue-next'
+import { Phone, Mail, MapPin, Facebook, Star, MessageCircle } from 'lucide-vue-next'
 
 useHead({
   title: 'Contact Us | Time To Refurbish',

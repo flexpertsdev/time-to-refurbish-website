@@ -5,9 +5,9 @@
         <!-- Company Info -->
         <div class="lg:col-span-2">
           <img 
-            src="/newlogo.png" 
+            src="/logo-optimized.png" 
             alt="Time To Refurbish" 
-            class="h-10 mb-6 brightness-0 invert"
+            class="h-8 mb-6 brightness-0 invert"
           />
           <p class="text-gray-400 mb-6 max-w-md">
             Luxury renovations and bespoke design for discerning homeowners in South East London.
